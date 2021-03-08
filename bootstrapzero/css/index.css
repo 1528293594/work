@@ -5,7 +5,7 @@ body{
     .container{
         width: 1276.5px;
     }
-}
+}                                                                                                                                                                                                                                                                                                                                               
 @media only screen and (min-width:993px){
     .container{
         width: 90%;
@@ -203,37 +203,68 @@ a{
 }
 /* 清除fixed脱离文档流部分的位置 */
 .header{
-    height: 74px;
+    height: 64px;
 }
 /* 轮播图部分样式 */
+/* 媒体查询改变banner大小 */
+@media screen and (max-width:1000px){
+    .banner{
+        height: 600px!important;
+    }
+}
 .banner{
     width: 100%;
     background-color: #9C27B0;
     position: relative;
+    height: 406px;
+}
+@media screen and (max-width:1200px){
+    .fl{
+        float: left;
+    }
+}
+.banner .container .row ul{
+    position: relative;
+}
+.banner .container .row ul li{
+    position: absolute;
 }
 
 .banner .container .row ul li div image{
     max-height: 275px;
     max-width: 100%;
-
+    
 }
 .banner .container .row ul li div h1{
     color: #ffffff;
-    font-weight:100!important;
+    font-family: "Roboto", sans-serif;
+    font-weight:200;
     font-size: 3rem;
 }
 .banner .container .row ul li div h2{
     color: #ffffff;
-    font-weight: 100!important;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
     font-size: 2rem;
 }
-
-.banner .container .row ul li{
-    display: none;
+.banner .container .row ul li:nth-child(1){
+    left: 0px;
 }
-.banner .container .row ul li:nth-child(1)
-{
-    display: block;
+.banner .container .row ul li:nth-child(2){
+    left: 2000px;
+}
+.banner .container .row ul li:nth-child(3){
+    left: 4000px;
+}
+.banner .container .row ul li:nth-child(4){
+    left: 6000px;
+}
+.banner .container .row ul li:nth-child(5){
+    left: 8000px;
+}
+
+.banner .container .row ul li:nth-child(6){
+    left: 10000px;
 }
 /* 轮播图按钮 */
 .banner .dots{
@@ -264,6 +295,10 @@ a{
 /* card部分 */
 .card{
     margin-top: 50px;
+    
+}
+.card .container .row {
+    height: auto;
 }
 .card .container .row div{
     padding: 0 2rem;
@@ -302,6 +337,9 @@ a{
     margin-top: 85px;
 }
 /* hover */
+.card_hover .container .row{
+    height: auto;
+}
 .card_hover .container .row div:hover{
     background-color: #4A148C;
     color: #ffffff!important;
@@ -400,6 +438,18 @@ a{
     letter-spacing: 0px;
 }
 .description .container .row div .right{
-    font-weight:100;
+    font-family: "Roboto", sans-serif;
+    font-weight:300;
     font-size: 2.5rem;
 }
+.shadow{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 998;
+    background-color: rgba(0,0,0,0.5);
+    height: 120vh;
+    display: none;
+}
+
